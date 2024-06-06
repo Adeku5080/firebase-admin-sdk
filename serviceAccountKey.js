@@ -1,4 +1,7 @@
-export const serviceAccount = {
+require("dotenv").config();
+
+
+const serviceAccount = {
   type: "service_account",
   project_id: process.env.FIREBASE_PROJECT_ID,
   private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
@@ -11,3 +14,5 @@ export const serviceAccount = {
   client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL,
   universe_domain: process.env.FIREBASE_UNIVERSE_DOMAIN,
 };
+
+module.exports = serviceAccount;
